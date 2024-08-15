@@ -9,4 +9,67 @@ export class Tab1Page {
 
   constructor() {}
 
+  public actionSheetButtons = [
+    {
+      text: 'Delete',
+      role: 'destructive',
+      data: {
+        action: 'delete',
+      },
+    },
+    {
+      text: 'Share',
+      data: {
+        action: 'share',
+      },
+    },
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      data: {
+        action: 'cancel',
+      },
+    },
+  ];
+  
+  public alertButtons = [
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      handler: () => {
+        console.log('Alert canceled');
+      },
+    },
+    {
+      text: 'OK',
+      role: 'confirm',
+      handler: () => {
+        console.log('Alert confirmed');
+      },
+    },
+  ];
+
+  public alertButtonsinput = ['OK'];
+  public alertInputs = [
+    {
+      placeholder: 'ชื่อสินค้า',
+    },
+    {
+      placeholder: 'กรอกชื่อสินค้าได้สูงสุด8ตัวอักษร',
+      attributes: {
+        maxlength: 8,
+      },
+    },
+    {
+      type: 'number',
+      placeholder: 'Age',
+      min: 1,
+      max: 100,
+    },
+    {
+      type: 'textarea',
+      placeholder: 'A little about yourself',
+    },
+  ];
+
 }
